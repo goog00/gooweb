@@ -1,0 +1,85 @@
+spring:
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+  application:
+    name: online-mall
+  profiles:
+    active: dev
+
+logging:
+  level:
+    root: info
+  file: ${spring.application.name}.log
+
+server:
+  compression:
+    enabled: true
+    mime-types: application/json,application/xml,text/html,text/javascript,text/css,text/xml,text/plain
+    min-response-size: 2048
+  tomcat:
+    accept-count: 400
+    uri-encoding: utf-8
+    min-spare-threads: 25
+    max-threads: 400
+  connection-timeout: 20000
+  servlet-path: /api
+
+
+---
+spring:
+  profiles: dev
+  datasource:
+      driverClassName: com.mysql.jdbc.Driver
+      url: jdbc:mysql://192.168.20.3:3306/feijiyuan_chain_operation_dev?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&autoReconnect=true
+      username: operationAdmin
+      password: operationPassword@1234
+      maxActive: 5
+      initialSize: 1
+      maxWait: 60000
+      timeBetweenEvictionRunsMillis: 60000
+      minEvictableIdleTimeMillis: 300000
+      validationQuery: "SELECT 'x'"
+      testWhileIdle: true
+      testOnBorrow: true
+      testOnReturn: false
+      poolPreparedStatements: true
+      maxPoolPreparedStatementPerConnectionSize: 50
+  redis:
+      host: 192.168.20.3
+      port: 6379
+      password: devRedis&123
+      database: 2
+      timeout: 0
+      pool:
+        max-active: 8
+        max-wait: -1
+        max-idle: 8
+        min-idle: 0
+logging:
+ level:
+  com.rograndec: debug
+
+mall:
+  saas:
+    apiUrl: http://192.168.20.3/api
+front:
+  url: http://192.168.22.223:8081
+
+wechat:
+  appid: wx039bbd100d54731c
+  appsecret: 51d6195ed9865e5936df5c39e54c76a4
+#获取支付url
+pay:
+  getPayUrl: http://pay.test.wdyy.com.cn/weixin/prePaySaas.html
+
+server:
+  port: 9995
+
+
+
+
+
+
+
+  
