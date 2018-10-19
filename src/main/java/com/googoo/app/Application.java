@@ -6,12 +6,17 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
+import java.io.File;
+
 
 @SpringBootApplication
-@EnableTransactionManagement
-@ComponentScan("com.googoo")
-public class Application extends WebMvcConfigurerAdapter {
+//@EnableTransactionManagement
+//@ComponentScan("com.googoo")
+public class Application  {
+
+
 	public static void main(String[] args) {
+
 		SpringApplication.run(Application.class, args);
 	}
 

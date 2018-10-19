@@ -3,7 +3,7 @@ spring:
     time-zone: GMT+8
     date-format: yyyy-MM-dd HH:mm:ss
   application:
-    name: online-mall
+    name: gooweb
   profiles:
     active: dev
 
@@ -34,47 +34,26 @@ spring:
       url: jdbc:mysql://192.168.20.3:3306/feijiyuan_chain_operation_dev?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&autoReconnect=true
       username: operationAdmin
       password: operationPassword@1234
-      maxActive: 5
-      initialSize: 1
-      maxWait: 60000
-      timeBetweenEvictionRunsMillis: 60000
-      minEvictableIdleTimeMillis: 300000
-      validationQuery: "SELECT 'x'"
-      testWhileIdle: true
-      testOnBorrow: true
-      testOnReturn: false
-      poolPreparedStatements: true
-      maxPoolPreparedStatementPerConnectionSize: 50
   redis:
       host: 192.168.20.3
       port: 6379
       password: devRedis&123
-      database: 2
+      database: 4
       timeout: 0
       pool:
         max-active: 8
         max-wait: -1
         max-idle: 8
         min-idle: 0
+  session:
+    store-type: redis
 logging:
  level:
   com.rograndec: debug
 
-mall:
-  saas:
-    apiUrl: http://192.168.20.3/api
-front:
-  url: http://192.168.22.223:8081
-
-wechat:
-  appid: wx039bbd100d54731c
-  appsecret: 51d6195ed9865e5936df5c39e54c76a4
-#获取支付url
-pay:
-  getPayUrl: http://pay.test.wdyy.com.cn/weixin/prePaySaas.html
-
 server:
-  port: 9995
+  port: 9988
+
 
 
 
