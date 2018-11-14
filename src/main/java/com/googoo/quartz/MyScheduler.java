@@ -32,12 +32,12 @@ public class MyScheduler {
         scheduler.start();
 
 
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        scheduler.shutdown();
+//        try {
+//            Thread.sleep(1000);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
+//        scheduler.shutdown();
 
     }
 }

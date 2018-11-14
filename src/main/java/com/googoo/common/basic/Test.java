@@ -1,13 +1,7 @@
 package com.googoo.common.basic;
 
 
-import org.apache.shiro.crypto.hash.Hash;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
+import java.util.*;
 
 public class Test {
 
@@ -102,37 +96,96 @@ public class Test {
 //        System.out.println("------map------" + (end3 - end2));
 
 
-        int k = 10;
-        System.out.println(k / 3);
+//        int k = 10;
+//        System.out.println(k / 3);
 //        System.out.println(k % 3);
+//
+//List<Integer> list2 = new ArrayList<>();
+//
+//        List<Integer> list = new ArrayList<>();
+//        for(int i = 0 ; i < 100; i++){
+//            list.add(i);
+//        }
+//
+//        list2.addAll(list);
+////        list.clear();
+//        list = null;
+//        System.out.println(list2.size());
 
-
-        List<Integer> list = new ArrayList<>();
-        for(int i = 0 ; i < 100; i++){
-            list.add(i);
-        }
-        List<Integer> integers = list.subList(1, 10);
-        System.out.println(integers);
-        System.out.println(list.size());
-        integers.clear();
+//        Demo demo = new Demo();
+////        demo.setList(list);
 //        System.out.println(list.size());
-        System.out.println(list.subList(100,list.size()));
+////        list.clear();
+//        System.out.println(demo.getList().size());
+//        demo = null;
+
+//        List<Integer> integers = list.subList(1, 10);
+////        System.out.println(integers);
+//        System.out.println(list.size());
+//        integers.clear();
+//        System.out.println(list.size());
 
 //        List<Integer> collect = list.parallelStream().filter(item -> (item / 4 == 0)).collect(Collectors.toList());
 //        System.out.println("collect1" + collect.size());
 //        System.out.println("结束");
 //        System.out.println("collect2" + collect.size());
 
+
+//        String date = "2018-10-10 00:00:00";
+//        SimpleDateFormat instance = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+//        Date parse = instance.parse(date);
+//
+//        System.out.println(parse);
+
+//        Test2 test2 = new Test2();
+//        Demo demo = test2.create();
+//        System.out.println(demo);
+//        demo = null;
+//        System.out.println(demo);
+//        System.out.println(test2.getDemo().getList());
+////        test2.getDemo().getList().clear();
+//        System.out.println(test2.getDemo().getList());
+
+
+        int k = 1;
+        k--;
+//        System.out.println(k);
+//        --k;
+        System.out.println(k);
+        System.out.println(k>0);
+
+
+
+
+
+    }
+
+    private void set(Demo demo ,List<Integer> list){
+        demo.setList(list);
+        List<Integer> list1 = new ArrayList<>();
+        for(Integer integer1 : list){
+            list1.add(integer1);
+        }
+        demo.setList(list1);
+    }
+
+
+    private static  Demo get(){
+        return new Demo();
     }
 
 
 }
+
+
 
 class Demo{
 
     private String id;
     private String name;
     private String age;
+
+    List<Integer> list;
 
     public String getId() {
         return id;
@@ -156,5 +209,13 @@ class Demo{
 
     public void setAge(String age) {
         this.age = age;
+    }
+
+    public List<Integer> getList() {
+        return list;
+    }
+
+    public void setList(List<Integer> list) {
+        this.list = list;
     }
 }
