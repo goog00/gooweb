@@ -11,6 +11,7 @@
     <modules>
         <module>springmvc</module>
         <module>basic</module>
+        <module>jvm</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
