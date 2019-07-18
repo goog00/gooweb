@@ -31,11 +31,11 @@ spring:
   profiles: dev
   datasource:
       driverClassName: com.mysql.jdbc.Driver
-      url: jdbc:mysql://192.168.20.3:3306/feijiyuan_chain_operation_dev?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&autoReconnect=true
+      url: jdbc:mysql://192.168.20.4:3306/feijiyuan_chain_operation_dev?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&autoReconnect=true
       username: operationAdmin
       password: operationPassword@1234
   redis:
-      host: 192.168.20.3
+      host: 192.168.20.4
       port: 6379
       password: devRedis&123
       database: 4
