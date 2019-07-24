@@ -13,9 +13,9 @@ java内存模型规范了JVM如何提供按需禁用缓存和编译优化的方�
     六项happen-before 规则: 前面一个操作的结果对后续操作是可见的
 
 happen-before:
-1、程序的顺序性规则
-2、volatile 变量规则
-3、传递性
+1、程序的顺序性规则：程序前面对某个变量的修改一定对后续操作可见
+2、volatile 变量规则：对一个volatile变量的写操作，Happen-Before 于后续对这个变量的读操作。
+3、传递性：A Happen-Before B ,且B Happen_before C ,那么A happen-Before C。
 4、管程中锁的规则:指对一个锁的解锁happen-before 于后续对这个锁的加锁
    管程是一种通用的同步原语，在java中指的就是synchronized,synchronized 就是对管程的实现。
 5、线程start()规则
