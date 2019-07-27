@@ -1,4 +1,4 @@
-package com.googoo.pattern.duty;
+package com.googoo.pattern.duty.one;
 
 /**
  * @author sunteng

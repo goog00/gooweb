@@ -1,4 +1,4 @@
-package com.googoo.pattern.duty;
+package com.googoo.pattern.duty.one;
 
 import java.util.ArrayList;
 import java.util.Random;
