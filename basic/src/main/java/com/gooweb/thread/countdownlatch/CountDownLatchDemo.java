@@ -1,4 +1,4 @@
-package com.gooweb.thread;
+package com.gooweb.thread.countdownlatch;
 
 import java.util.concurrent.CountDownLatch;
 
