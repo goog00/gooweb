@@ -16,7 +16,7 @@ public class CyclicBarrierTest {
             @Override
             public void run() {
                 try {
-                    //当前线程被阻塞
+                    //当前线程被阻塞，等待计数器变成0
                     c.await();
                 } catch (InterruptedException e) {
                     e.printStackTrace();
@@ -28,7 +28,7 @@ public class CyclicBarrierTest {
         }).start();
 
         try {
-            //当前线程被阻塞
+            //当前线程被阻塞，等待计数器变成0
             c.await();
         } catch (InterruptedException e) {
             e.printStackTrace();

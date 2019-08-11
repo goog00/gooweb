@@ -52,6 +52,7 @@ public class CyclicBarrierDemo3 {
                 Thread.sleep(5000);
                 System.out.println("线程" + Thread.currentThread().getName() + "写入数据完毕，等待其他线程写入完毕");
 
+                //当前线程等待2000毫秒，
                 cyclicBarrier.await(2000, TimeUnit.MICROSECONDS);
             } catch (Exception e) {
                 e.printStackTrace();

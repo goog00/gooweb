@@ -25,6 +25,7 @@ public class CountDownLatchDemo {
                     System.out.println("子线程" + Thread.currentThread().getName() + "正在执行");
                     Thread.sleep(3000);
                     System.out.println("子线程" + Thread.currentThread().getName() + "执行完毕");
+                    //当前线程执行完毕，计数器减1
                     latch.countDown();
                 }catch (Exception e){
 
@@ -38,9 +39,10 @@ public class CountDownLatchDemo {
             public void run(){
 
                 try {
-                    System.out.println("子线程" + Thread.currentThread().getName() + "z正在执行");
+                    System.out.println("子线程" + Thread.currentThread().getName() + "正在执行");
                     Thread.sleep(3000);
                     System.out.println("子线程" + Thread.currentThread().getName() + "执行完毕");
+                    //当前线程执行完毕，计数器减1
                     latch.countDown();
                 } catch (InterruptedException e) {
                     e.printStackTrace();
@@ -51,7 +53,7 @@ public class CountDownLatchDemo {
 
         try {
             System.out.println("等待2个子线程执行完毕。。");
-            //阻塞当前线程
+            //阻塞当前线程,等待latch 计数器变成0，当计数器变成0表示阻塞结束
             latch.await();
             System.out.println("2个子线程已经执行完毕");
             System.out.println("继续执行主线程");
