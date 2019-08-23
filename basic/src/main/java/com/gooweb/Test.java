@@ -4,12 +4,37 @@ package com.gooweb;
  * @author sunteng
  * @create 2019-08-13 下午 10:39
  **/
-public class Test
-{
+public class Test {
 
     public static void main(String[] args) {
-        String  k = "kio";;
-        System.out.println(k.replaceAll("\\*",""));
+//        String  k = "kio";;
+//        System.out.println(k.replaceAll("\\*",""));
+//
+//        String str = null;
+//        if( 1==1 & str.equals("1")){
+//            System.out.println("&");
+//        }
+//
+//        if(1==1 && str.equals("1")){
+//            System.out.println("&&");
+//        }
+//
+//
+//        short s1 = 1;
+//        s1 = (short) (s1 + 1);
+//        s1 += 1;
+
+
+        double du = -11.6d;
+        double ceil = Math.ceil(du);
+        double floor = Math.floor(du);
+        long round = Math.round(du);
+        System.out.println(ceil);
+        System.out.println(floor);
+        System.out.println(round);
+
+
+
 
     }
 }
