@@ -20,14 +20,14 @@ import java.util.Hashtable;
  * @author sunteng
  * @create 2019-08-26 下午 4:05
  **/
-public class LRUCache {
+public class LRUCache_146 {
 
     private Hashtable<Integer,DLinkedNode> cache = new Hashtable<Integer,DLinkedNode>();
     private int count;
     private int capacity;
     private DLinkedNode head,tail;
 
-    public LRUCache(int capacity){
+    public LRUCache_146(int capacity){
         //缓存空间使用量
         this.count = 0;
         //缓存容量阈值
@@ -162,5 +162,20 @@ public class LRUCache {
     }
 
 
+    public static void main(String[] args) {
+        LRUCache_146 cache = new LRUCache_146( 2 /* 缓存容量 */ );
 
+        cache.put(1, 1);
+        cache.put(2, 2);
+        cache.get(1);       // 返回  1
+        cache.put(3, 3);    // 该操作会使得密钥 2 作废
+        cache.get(2);       // 返回 -1 (未找到)
+        cache.put(4, 4);    // 该操作会使得密钥 1 作废
+        cache.get(1);       // 返回 -1 (未找到)
+        cache.get(3);       // 返回  3
+        cache.get(4);       // 返回  4
+
+
+
+    }
 }
