@@ -15,6 +15,14 @@ import java.util.Queue;
  **/
 public class Solution_102_2 {
 
+    /**
+     * 复杂度分析
+     *
+     * 时间复杂度：O(N)O(N)，因为每个节点恰好会被运算一次。
+     * 空间复杂度：O(N)O(N)，保存输出结果的数组包含 N 个节点的值。
+     * @param root
+     * @return
+     */
     public List<List<Integer>> levelOrder(TreeNode root){
         List<List<Integer>> levels = new ArrayList<>();
         if(root == null){
