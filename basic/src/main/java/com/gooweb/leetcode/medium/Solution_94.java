@@ -1,5 +1,6 @@
 package com.gooweb.leetcode.medium;
 
+import com.gooweb.leetcode.GetTree;
 import com.gooweb.leetcode.TreeNode;
 
 import java.util.ArrayList;
@@ -50,17 +51,8 @@ public class Solution_94 {
 
     public static void main(String[] args) {
         Solution_94 solution_94 = new Solution_94();
-        TreeNode treeNode = new TreeNode(3);
-        TreeNode treeNode1 = new TreeNode(9);
-        TreeNode treeNode2 = new TreeNode(20);
-        TreeNode treeNode3 = new TreeNode(15);
-        TreeNode treeNode4 = new TreeNode(7);
 
-
-        treeNode.left = treeNode1;
-        treeNode.right = treeNode2;
-        treeNode2.left = treeNode3;
-        treeNode2.right = treeNode4;
+        TreeNode treeNode = GetTree.getTreeNode();
 
         List<Integer> list = solution_94.inorderTraversal(treeNode);
 
