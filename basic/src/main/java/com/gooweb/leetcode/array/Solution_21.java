@@ -1,7 +1,9 @@
 package com.gooweb.leetcode.array;
 
+import com.gooweb.leetcode.ListNode;
+
 /**
- *
+ * 将两个有序链表合并为一个新的有序链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的
  * https://leetcode-cn.com/problems/merge-two-sorted-lists/
  * 合并两个有序链表
  * @author sunteng
@@ -30,10 +32,10 @@ public class Solution_21 {
 
     public static void main(String[] args) {
         ListNode node1 = new ListNode(1);
-        ListNode node2 = new ListNode(2);
-        ListNode node3 = new ListNode(3);
-        node1.next = node2;
-        node2.next = node3;
+//        ListNode node2 = new ListNode(2);
+//        ListNode node3 = new ListNode(3);
+//        node1.next = node2;
+//        node2.next = node3;
 
         ListNode node4 = new ListNode(5);
         ListNode node5 = new ListNode(6);
@@ -55,12 +57,4 @@ public class Solution_21 {
 
 }
 
-class ListNode{
-    int val;
-    ListNode next;
-    ListNode(int x){
-        val = x;
-    }
 
-
-}
