@@ -42,7 +42,7 @@ class MyStack {
     
     /** Get the top element. */
     public int top() {
-        return q1.peek();
+        return top;
     }
     
     /** Returns whether the stack is empty. */
@@ -58,6 +58,9 @@ class MyStack {
         obj.push(5);
         obj.push(7);
 
+        int top = obj.top();
+        System.out.println("top = " + top);
+
         int pop1 = obj.pop();
         System.out.println("pop1 = " + pop1);
         int pop2 = obj.pop();
@@ -65,6 +68,7 @@ class MyStack {
 
         int pop3 = obj.pop();
         System.out.println("pop3 = " + pop3);
+
     }
 }
 
