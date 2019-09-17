@@ -26,7 +26,7 @@ public class Solution_1021_1 {
 
     public static void main(String[] args) {
         Solution_1021_1 solution = new Solution_1021_1();
-        String s = "(()())";
+        String s = "((()))()";
         String s1 = solution.removeOuterParentheses(s);
         System.out.println(s);
         System.out.println(s1);

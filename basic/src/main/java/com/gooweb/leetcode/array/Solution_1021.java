@@ -29,7 +29,7 @@ public class Solution_1021 {
     }
 
     public static void main(String[] args) {
-        String s = "()()";
+        String s = "((()))()";
         Solution_1021 solution_1021 = new Solution_1021();
         String s1 = solution_1021.removeOuterParentheses(s);
         System.out.println(s);
