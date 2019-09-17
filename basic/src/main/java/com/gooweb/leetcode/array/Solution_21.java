@@ -11,6 +11,14 @@ import com.gooweb.leetcode.ListNode;
  **/
 public class Solution_21 {
 
+    /**
+     * 1.链表是有序的
+     * 2.递归
+     * @param l1
+     * @param l2
+     * @return
+     */
+
     public static ListNode mergeTwoLists(ListNode l1, ListNode l2) {
 
         if(l1 == null){
@@ -31,7 +39,7 @@ public class Solution_21 {
     }
 
     public static void main(String[] args) {
-        ListNode node1 = new ListNode(1);
+        ListNode node1 = new ListNode(9);
 //        ListNode node2 = new ListNode(2);
 //        ListNode node3 = new ListNode(3);
 //        node1.next = node2;
@@ -39,7 +47,7 @@ public class Solution_21 {
 
         ListNode node4 = new ListNode(5);
         ListNode node5 = new ListNode(6);
-        ListNode node6 = new ListNode(7);
+        ListNode node6 = new ListNode(20);
         node4.next = node5;
         node5.next = node6;
 
