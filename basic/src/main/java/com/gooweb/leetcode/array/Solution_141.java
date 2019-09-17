@@ -1,5 +1,7 @@
 package com.gooweb.leetcode.array;
 
+import com.gooweb.leetcode.ListNode;
+
 import java.util.HashSet;
 import java.util.Set;
 
