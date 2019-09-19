@@ -3,7 +3,9 @@ package com.gooweb.leetcode.array;
 import com.gooweb.leetcode.TreeNode;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
  * 单值二叉树
@@ -13,15 +15,13 @@ import java.util.List;
  **/
 public class Solution_965 {
 
-    List<Integer> vals;
+    Set<Integer> vals;
 
     public boolean isUnivalTree(TreeNode root){
-        vals = new ArrayList<>();
+        vals = new HashSet<>();
         dfs(root);
-        for(int v : vals){
-            if(v != vals.get(0)){
-                return false;
-            }
+        if(vals.size() > 1){
+            return false;
         }
         return true;
     }
