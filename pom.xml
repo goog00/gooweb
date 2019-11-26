@@ -195,33 +195,15 @@
         </dependency>
 
 
-        <!--spring-session-data-redis-->
+<!--        &lt;!&ndash;spring-session-data-redis&ndash;&gt;-->
 
-        <dependency>
-            <groupId>org.springframework.session</groupId>
-            <artifactId>spring-session-data-redis</artifactId>
-            <!--<type>pom</type>-->
-        </dependency>
-
-
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.session</groupId>-->
+<!--            <artifactId>spring-session-data-redis</artifactId>-->
+<!--            &lt;!&ndash;<type>pom</type>&ndash;&gt;-->
+<!--        </dependency>-->
 
 
-
-        <dependency>
-            <groupId>javax.mail</groupId>
-            <artifactId>mail</artifactId>
-            <version>1.4.7</version>
-        </dependency>
-        <dependency>
-            <groupId>javax.inject</groupId>
-            <artifactId>javax.inject</artifactId>
-            <version>1</version>
-        </dependency>
-        <dependency>
-            <groupId>org.twitter4j</groupId>
-            <artifactId>twitter4j-core</artifactId>
-            <version>4.0.6</version>
-        </dependency>
         <!-- Project rome rss, atom -->
         <dependency>
             <groupId>rome</groupId>
@@ -280,6 +262,12 @@
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpcore</artifactId>
             <version>4.4.5</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.redisson</groupId>
+            <artifactId>redisson</artifactId>
+            <version>3.3.2</version>
         </dependency>
 
     </dependencies>

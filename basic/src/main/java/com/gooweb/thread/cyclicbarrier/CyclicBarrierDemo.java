@@ -1,5 +1,6 @@
 package com.gooweb.thread.cyclicbarrier;
 
+import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;
 
 /**
@@ -11,9 +12,17 @@ public class CyclicBarrierDemo {
     public static void main(String[] args) {
         int n = 4;
         CyclicBarrier barrier = new CyclicBarrier(n);
-        for(int i = 0; i < n; i++){
+        for(int i = 0; i < n-1; i++){
             new Writer(barrier).start();
         }
+        try {
+            barrier.await();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (BrokenBarrierException e) {
+            e.printStackTrace();
+        }
+        System.out.println("主线程开始执行");
     }
 
 
@@ -33,7 +42,6 @@ public class CyclicBarrierDemo {
             } catch (Exception e){
 
             }
-            System.out.println("所有线程写入完毕，继续处理其他任务。。");
 
         }
     }
