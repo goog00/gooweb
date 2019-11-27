@@ -16,15 +16,15 @@ import java.util.concurrent.CompletableFuture;
 @Slf4j
 public class Demo3 {
 
-    public static void main(String[] args) {
-        CompletableFuture<String> futrue = CompletableFuture.supplyAsync(()->{
-            try(InputStream is = new URL("http://www.baidu.com").openStream()){
-                log.info("Downloading");
-                return IOUtils.toString(is, StandardCharsets.UTF_8.toString());
-            } catch (IOException e){
-                throw new RuntimeException(e);
-            }
-
-        });
-    }
+//    public static void main(String[] args) {
+//        CompletableFuture<String> futrue = CompletableFuture.supplyAsync(()->{
+//            try(InputStream is = new URL("http://www.baidu.com").openStream()){
+//                log.info("Downloading");
+//                return IOUtils.toString(is, StandardCharsets.UTF_8.toString());
+//            } catch (IOException e){
+//                throw new RuntimeException(e);
+//            }
+//
+//        });
+//    }
 }

@@ -34,22 +34,6 @@ spring:
       url: jdbc:mysql://192.168.20.4:3306/feijiyuan_chain_operation_dev?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&autoReconnect=true
       username: operationAdmin
       password: operationPassword@1234
-  redis:
-      host: 192.168.20.4
-      port: 6379
-      password: devRedis&123
-      database: 4
-      timeout: 0
-      pool:
-        max-active: 8
-        max-wait: -1
-        max-idle: 8
-        min-idle: 0
-  session:
-    store-type: redis
-logging:
- level:
-  com.rograndec: debug
 
 server:
   port: 9988
