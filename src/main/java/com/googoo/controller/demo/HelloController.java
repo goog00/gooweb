@@ -22,7 +22,6 @@ public class HelloController {
     @Autowired
     ApplicationContext applicationContext;
 
-//    @ApiOperation(value = "用户登录")
     @GetMapping("/login")
     public String  login(HttpServletRequest request) {
 

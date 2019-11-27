@@ -7,10 +7,6 @@ spring:
   profiles:
     active: dev
 
-logging:
-  level:
-    root: info
-  file: ${spring.application.name}.log
 
 server:
   compression:
@@ -23,19 +19,6 @@ server:
     min-spare-threads: 25
     max-threads: 400
   connection-timeout: 20000
-  servlet-path: /api
-
-
----
-spring:
-  profiles: dev
-  datasource:
-      driverClassName: com.mysql.jdbc.Driver
-      url: jdbc:mysql://192.168.20.4:3306/feijiyuan_chain_operation_dev?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&autoReconnect=true
-      username: operationAdmin
-      password: operationPassword@1234
-
-server:
   port: 9988
 
 
@@ -45,4 +28,4 @@ server:
 
 
 
-  
+
