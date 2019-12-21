@@ -7,6 +7,13 @@ package com.gooweb.geekbang.datastruct.chapter11;
  **/
 public class InsertionSort {
 
+    /**
+     * 时间复杂度：
+     * 最好：O(n)
+     * 最坏：O(n^2)
+     * 平均：O(n^2)
+     */
+
     public static void insertionSort(int[] a, int n){
         if(n <= 1){
             return;
