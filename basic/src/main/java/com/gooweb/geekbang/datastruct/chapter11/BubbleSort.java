@@ -7,11 +7,14 @@ package com.gooweb.geekbang.datastruct.chapter11;
  **/
 public class BubbleSort {
 
+
     /**
-     *
-     * @param a
-     * @param n 数组大小
-      */
+     * 稳定
+     * 时间复杂度：
+     * 最好：O(n)
+     * 最坏：O(n^2)
+     * 平均：O(n^2)
+     */
     public static void bubbleSort(int[] a,int n){
 
         if(n <= 1){

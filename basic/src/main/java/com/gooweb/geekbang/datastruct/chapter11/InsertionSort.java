@@ -8,6 +8,7 @@ package com.gooweb.geekbang.datastruct.chapter11;
 public class InsertionSort {
 
     /**
+     * 稳定
      * 时间复杂度：
      * 最好：O(n)
      * 最坏：O(n^2)
