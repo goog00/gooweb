@@ -1,4 +1,4 @@
-package com.gooweb.geekbang.chapter15;
+package com.gooweb.geekbang.concurrency.chapter15;
 
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;

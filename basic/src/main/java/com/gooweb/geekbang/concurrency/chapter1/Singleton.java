@@ -1,4 +1,4 @@
-package com.gooweb.geekbang.chapter1;
+package com.gooweb.geekbang.concurrency.chapter1;
 
 /**
  * 编译优化带来的有序性问题

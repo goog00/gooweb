@@ -1,4 +1,4 @@
-package com.gooweb.geekbang.chapter1;
+package com.gooweb.geekbang.concurrency.chapter1;
 
 /**
  * 缓存可见性问题demo

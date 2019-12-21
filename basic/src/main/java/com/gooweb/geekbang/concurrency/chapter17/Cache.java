@@ -1,6 +1,4 @@
-package com.gooweb.geekbang.chapter17;
-
-import lombok.Data;
+package com.gooweb.geekbang.concurrency.chapter17;
 
 import java.util.HashMap;
 import java.util.Map;
