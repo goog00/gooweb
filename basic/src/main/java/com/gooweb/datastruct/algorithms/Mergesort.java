@@ -1,4 +1,4 @@
-package com.gooweb.datastruct;
+package com.gooweb.datastruct.algorithms;
 
 
 /**
@@ -11,6 +11,8 @@ public class Mergesort {
 
     private static Comparable[] aux = new Comparable[]{}  ;
 
+
+    //原地归并排序
     public static void merge (Comparable[] a ,int lo,int mid,int hi){
         //Merge a[lo ... mid] with a[mid+1...hi]
         int i = lo,j = mid + 1;
@@ -36,6 +38,10 @@ public class Mergesort {
             }
         }
     }
+
+
+
+
 
     private static boolean less(Comparable a,Comparable b){
         return a.compareTo(b) < 0;
