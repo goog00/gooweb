@@ -3,6 +3,7 @@ package com.gooweb;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 
 /**
@@ -39,11 +40,15 @@ public class Test {
 //        System.out.println(round);
 
 
-        List<User> list = new ArrayList<>();
+//        List<User> list = new ArrayList<>();
+//
+//        Map<String, List<User>> collect = list.stream().collect(Collectors.groupingBy(User::getName));
+//        List<User> users = collect.get("33");
+//        System.out.println(users);
 
-        Map<String, List<User>> collect = list.stream().collect(Collectors.groupingBy(User::getName));
-        List<User> users = collect.get("33");
-        System.out.println(users);
+
+
+
 
 
     }
