@@ -16,6 +16,8 @@ public class Mutex implements Lock, Serializable {
 
     // 内部辅助类
     private static class Sync extends AbstractQueuedSynchronizer{
+
+        //是否处于占用状态
         protected boolean isHeldExclusively(){
             return getState() == 1;
         }
@@ -29,6 +31,7 @@ public class Mutex implements Lock, Serializable {
             return false;
         }
 
+        //释放锁,将状态设置为0
         @Override
         protected boolean tryRelease(int releases) {
             if(getState() == 0){
