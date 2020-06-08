@@ -29,28 +29,35 @@ public class TestClass {
     }
 
     public static void main(String[] args) {
-        int a = 3;
-        System.out.println(a++);
-        System.out.println(a);
-        int b = 3;
-        System.out.println(++b);
-        System.out.println(b);
+//        int a = 3;
+//        System.out.println(a++);
+//        System.out.println(a);
+//        int b = 3;
+//        System.out.println(++b);
+//        System.out.println(b);
+//
+//        int c = 3;
+//        test2(c);
+//        System.out.println(c);
+////        System.out.println(d);
+//        String str = "444";
+//        test3(str);
+//        System.out.println(str);
+//        int k = 3;
+//
+//        System.out.println(k);
+//
+//        test4(k);
+//        int i = 0;
+//        System.out.println(i++);
+//        System.out.println(++i);
 
-        int c = 3;
-        test2(c);
-        System.out.println(c);
-//        System.out.println(d);
-        String str = "444";
-        test3(str);
-        System.out.println(str);
-        int k = 3;
+        Long a1 = 11L;
+        Long a2 = 12L;
+        String kkk = "" + a1 + a2 ;
 
-        System.out.println(k);
+        System.out.println(kkk);
 
-        test4(k);
-        int i = 0;
-        System.out.println(i++);
-        System.out.println(++i);
 
     }
     public static  void test3(String str){

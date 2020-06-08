@@ -7,6 +7,13 @@ public class ListNode{
         val = x;
     }
 
+    @Override
+    public String toString() {
+        return "ListNode{" +
+                "val=" + val +
+                ", next=" + next +
+                '}';
+    }
 
     public static ListNode getListNode(){
         ListNode one = new ListNode(1);
@@ -14,13 +21,13 @@ public class ListNode{
         ListNode three = new ListNode(3);
         ListNode four = new ListNode(4);
 
-        ListNode two1 = new ListNode(2);
-        ListNode one1 = new ListNode(1);
         one.next = two;
-        two.next = two1;
-        two1.next = one1;
+        two.next = three;
+        three.next = four;
         return one;
     }
+
+
 
 
 

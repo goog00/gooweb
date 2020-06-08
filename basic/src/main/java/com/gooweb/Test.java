@@ -47,20 +47,44 @@ public class Test {
 //        System.out.println(users);
 
 
+//        String str = "test";
+//        String str2 = "test";
+//        System.out.println(str == str2);
+//
+        String str3 = new String("test");
+//        System.out.println(str == str3);
+
+        String str4 = str3.intern();
+
+        String str5 = "test";
+        System.out.println(str5 == str4);
+
 
 
 
 
     }
 
+
+
     class User{
+
+        public User(String name){
+
+            name = name;
+        }
+
+        public User(String name,Integer d){
+            this(name);
+        }
         String name;
 
         public String getName() {
             return name;
         }
 
-        public void setName(String name) {
+        public final void setName(String name) {
+
             this.name = name;
         }
     }

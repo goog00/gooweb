@@ -32,7 +32,7 @@ public class Demo1 {
          *
          */
 
-        byte[] array1 = new byte[1024 * 1024];//1m
+        byte[] array1 = new byte[6*1024 * 1024];//1m
         array1 = new byte[1024 * 1024];//1m
         array1 = new byte[1024 * 1024];//1m
         array1 = null;
