@@ -1,5 +1,9 @@
 package com.gooweb.pattern.duty;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
 /**
  * @author steng
  * @description
@@ -30,6 +34,11 @@ public class HandlerChain {
         if(head != null){
             head.handle();
         }
+
+        ArrayList<Integer> list = new ArrayList<>();
+
+        Iterator<Integer> iterator = list.iterator();
+        iterator.remove();
     }
 
 

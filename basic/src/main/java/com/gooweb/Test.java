@@ -1,8 +1,9 @@
 package com.gooweb;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 
@@ -12,7 +13,7 @@ import java.util.stream.Collectors;
  **/
 public class Test {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 //        String  k = "kio";;
 //        System.out.println(k.replaceAll("\\*",""));
 //
@@ -51,16 +52,49 @@ public class Test {
 //        String str2 = "test";
 //        System.out.println(str == str2);
 //
-        String str3 = new String("test");
-//        System.out.println(str == str3);
+//        String str3 = new String("test");
+////        System.out.println(str == str3);
+//
+//        String str4 = str3.intern();
+//
+//        String str5 = "test";
+//        System.out.println(str5 == str4);
 
-        String str4 = str3.intern();
-
-        String str5 = "test";
-        System.out.println(str5 == str4);
 
 
+        List<String> list = new ArrayList<>();
 
+        for(int i = 0; i< 10000; i++){
+            list.add("123"+ i);
+        }
+
+
+
+        Iterator<String> iterator = list.iterator();
+
+        while (iterator.hasNext()){
+            String next = iterator.next();
+            if(next.equals("123100")){
+                iterator.remove();
+//                list.remove("123100");
+
+            }
+        }
+//
+//        for(String str : list){
+//            list.remove(str);
+//        }
+//
+//        LinkedList<String> list2 = new LinkedList<>();
+//        list2.add("dddd");
+//        list2.offer("333");
+//        System.out.println();
+
+        String path = "/Users/steng/myworkspace/codes/private/2019/gooweb/basic/src/main/java/com/gooweb/操作系统/线程/线程";
+        InputStream inputStream = new FileInputStream(path);
+        byte[] arr = new byte[10];
+        int read = inputStream.read(arr);
+        System.out.println(new String(arr));
 
 
     }

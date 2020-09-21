@@ -2,9 +2,7 @@ package com.googoo.controller.demo;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -33,4 +31,20 @@ public class HelloController {
 
 
     }
+
+
+    @GetMapping("/login/{test}")
+    public String login(HttpServletRequest request, @PathVariable String test) {
+
+        System.out.println(test);
+        return "Hello";
+    }
+
+
+    @PostMapping("/update")
+    public String  update(HttpServletRequest request, @RequestParam("test") String test) {
+        System.out.println(test);
+        return "Hello";
+    }
+
 }

@@ -6,6 +6,7 @@ import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 
 /**
+ * 共享锁
  * @author steng
  * @description
  * @date 2020-02-29 6:35 下午
