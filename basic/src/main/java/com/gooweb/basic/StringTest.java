@@ -1,5 +1,11 @@
 package com.gooweb.basic;
 
+import com.gooweb.reflect.Apple;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
 /**
  * @author steng
  * @description
@@ -12,8 +18,14 @@ public class StringTest {
 //        String str2 = str1.intern();//
 //        System.out.println(str1 == str1.intern());
 //        System.out.println(str1 == str2);
-        test1();
+//        test1();
 //        test2();
+
+        List<Apple> list = new ArrayList<>();
+        list.add(null);
+
+        List<Integer> allDirInodeIds = list.stream().map(Apple::getPrice).collect(Collectors.toList());
+
 
     }
 

@@ -1,4 +1,4 @@
-package com.gooweb.guava;
+package com.guava;
 
 import java.io.UnsupportedEncodingException;
 import java.util.Arrays;

@@ -1,4 +1,4 @@
-package com.gooweb.guava;
+package com.guava;
 
 import com.google.common.collect.*;
 import lombok.extern.slf4j.Slf4j;

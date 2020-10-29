@@ -1,4 +1,4 @@
-package com.gooweb.guava;
+package com.guava;
 
 import com.google.common.base.*;
 import com.google.common.collect.ComparisonChain;
