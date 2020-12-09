@@ -8,10 +8,13 @@ package com.gooweb.thread.threadlocal;
 public class ThreadLocalTest {
 
     static ThreadLocal<String> threadLocal = new ThreadLocal<>();
+    static ThreadLocal<String> threadLocal2 = new ThreadLocal<>();
+
 
 
     private static void print(){
         System.out.println(threadLocal.get());
+        System.out.println(threadLocal2.get());
     }
 
     public static void main(String[] args) throws InterruptedException {
@@ -20,7 +23,7 @@ public class ThreadLocalTest {
             @Override
             public void run() {
                 threadLocal.set("hello,thread1");
-                threadLocal.set("hello,second");
+                threadLocal2.set("hello,second");
                 print();
             }
         });

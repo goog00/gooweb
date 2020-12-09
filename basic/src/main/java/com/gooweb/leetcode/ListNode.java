@@ -17,7 +17,7 @@ public class ListNode{
 
     public static ListNode getListNode(){
         ListNode one = new ListNode(1);
-        ListNode two = new ListNode(2);
+        ListNode two = new ListNode(1);
         ListNode three = new ListNode(3);
         ListNode four = new ListNode(4);
 
