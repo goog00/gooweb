@@ -99,6 +99,8 @@ public class Test {
 
         System.out.println("测试git 回滚 ,增加一段代码");
 
+        System.out.println("测试git 回滚前 ,再增加一段代码");
+
     }
 
 

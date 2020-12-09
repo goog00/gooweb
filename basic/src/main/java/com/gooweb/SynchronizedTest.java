@@ -15,4 +15,9 @@ public class SynchronizedTest {
 
         }
     }
+
+
+    public void test(){
+        System.out.println("再来一次,");
+    }
 }
